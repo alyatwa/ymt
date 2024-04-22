@@ -1,8 +1,6 @@
 import CategoryCard from "@/components/digital-guide/category-card";
 import { Search } from "@/components/shared/search";
-import { API } from "@/const";
 import { useCategories } from "@/hooks/useCategories";
-import axios from "axios";
 
 export default async function Home() {
   const { categories } = await useCategories();
