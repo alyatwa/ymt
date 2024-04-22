@@ -1,7 +1,6 @@
-import { API } from "@/const";
-import axios from "axios";
+import { api } from "@/utils/api";
 
 export const useCategories = async () => {
-  const response = await axios.get(`${API.base}digital-guide/categories`);
+  const response = await api.get(`digital-guide/categories`);
   return { categories: response.data.data.categories as Category[] };
 };
