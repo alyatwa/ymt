@@ -1,5 +1,4 @@
-import CategoryCard from "@/components/digital-guide/category-card";
-import ProfileCard from "@/components/profile/profile-card";
+import ProfileCard from "@/components/category/profile-card";
 import { Search } from "@/components/shared/search";
 import { useCategories } from "@/hooks/useCategories";
 import { useCategory } from "@/hooks/useCategory";

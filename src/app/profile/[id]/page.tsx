@@ -1,3 +1,6 @@
+import { About } from "@/components/profile/about";
+import { Booking } from "@/components/profile/booking";
+import { Summary } from "@/components/profile/summary";
 import { useProfile } from "@/hooks/useProfile";
 import { useProfiles } from "@/hooks/useProfiles";
 
@@ -23,10 +26,13 @@ export default async function Profile({
   const { profile } = await useProfile(id);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between gap-8 py-24 bg-[#f9f9f9]">
-      <h1 className="text-[#252525] font-bold text-3xl">
-        *****{profile.first_name}
-      </h1>
+    <main className="flex min-h-screen flex-col md:flex-row items-center md:items-start justify-center gap-6 py-24 bg-[#f9f9f9]">
+      <div className="flex flex-col gap-6 justify-start">
+        <About profile={profile} />
+        <Summary summary={profile.about} />
+      </div>
+
+      <Booking />
     </main>
   );
 }
